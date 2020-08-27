@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contacto</title>
+  </head>
+
+  <body>
+    <p style="text-align: end;">
+      <a href="tarea1.html">
+        🔙 Volver
+      </a>
+    </p>
+    <h1>Contactanos</h1>
+    <hr />
+    <mark>¿Cuentanos sobre tu princesa de Nintendo favorita?</mark>
+
+    <form
+      enctype="text/plain"
+      method="post"
+      action="mailto:correo@iteso.mx?subject=Contacto"
+    >
+      <table border="1" width="50%">
+        <tr>
+          <td width="50%">
+            <label for="nombre" title="Nombre">Nombre:</label>
+          </td>
+          <td width="50%">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe tu nombre"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email" title="Email">Email:</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Escribe tu correo"
+              pattern=".*[@]"
+              required
+              oninvalid="this.setCustomValidity('Ingrese un correo valido')"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="princesa" title="Selecciona tu princesa favorita"
+              >Selecciona tu princesa favorita:</label
+            >
+          </td>
+          <td>
+            <select name="princesa" id="princesa" required>
+              <option value="peach">Peach</option>
+              <option value="daisy">Daisy</option>
+              <option value="zelda">Zelda</option>
+              <option value="samus">Samus</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="comentario" title="Comentario">Comentario:</label>
+          </td>
+          <td>
+            <textarea
+              id="comentario"
+              name="comentario"
+              cols="30"
+              rows="4"
+              placeholder="Escribe tu comentario sin acentos"
+              required
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit">Enviar</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
